@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SoruSorFragment"
+    android:orientation="vertical"
+    android:background="@color/black_a">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="56dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Soru Sor"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                />
+
+            <EditText
+                android:id="@+id/editTextSoruSorBaslik"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/edit_text_tasarim_2"
+                android:elevation="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Sorunuza bir başlık giriniz."
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black_a"
+                android:maxLength="150"
+                />
+
+            <EditText
+                android:id="@+id/editTextSoruSorİcerik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/edit_text_tasarim_2"
+                android:elevation="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="top|left"
+                android:hint="Yaşadığınız sorunu detayları ile birlikte buraya giriniz."
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="6"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black_a"
+                android:scrollbars="vertical"
+                android:maxLength="1000"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerSoruSorMarka"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerSoruSorModel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:backgroundTint="@color/white"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center_vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewSoruSorImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="7dp"
+                app:contentPadding="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_margin="32dp"
+                android:layout_gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_photo_1"
+                    app:tint="@color/black_a"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recylerViewSoruSorImage"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:nestedScrollingEnabled="false"
+                />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewSoruSorError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="İnternet bağlantısı bulunamadı!"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+                />
+
+            <Button
+                android:id="@+id/buttonSoruSorYayinla"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Yayınla"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="16sp"
+                android:elevation="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                />
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/bannerSoruSor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-3332967002509193/4316650773"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp">
+            </com.google.android.gms.ads.AdView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

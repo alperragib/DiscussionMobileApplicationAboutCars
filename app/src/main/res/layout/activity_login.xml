@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity"
+    android:background="@color/black_a"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="10dp"
+                app:contentPadding="10dp"
+                android:visibility="visible"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:elevation="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:shadowColor="@color/grey"
+                        android:shadowDx="0.5"
+                        android:shadowDy="0.5"
+                        android:shadowRadius="1"
+                        android:text="arababam.net"
+                        android:textColor="@color/secondaryColor"
+                        android:textSize="24sp" />
+
+
+                    <EditText
+                        android:id="@+id/editTextLog_EmailUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/edit_text_tasarim"
+                        android:elevation="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Kullanıcı adı veya email adresi"
+                        android:inputType="textEmailAddress|text"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp" />
+
+                    <EditText
+                        android:id="@+id/editTextLog_Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/edit_text_tasarim"
+                        android:elevation="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Şifre"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp" />
+
+                    <TextView
+                        android:id="@+id/textViewLoginError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:gravity="center"
+                        android:shadowColor="@color/grey"
+                        android:shadowDx="0.5"
+                        android:shadowDy="0.5"
+                        android:shadowRadius="1"
+                        android:text="Hatalı giriş yaptınız!"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="17sp"
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/buttonLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_margin="16dp"
+                        android:backgroundTint="@color/primaryColor"
+                        android:elevation="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Giriş Yap"
+                        android:textAllCaps="false"
+                        android:textSize="19sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/textViewKayitOl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:gravity="center"
+                        android:shadowColor="@color/grey"
+                        android:shadowDx="0.5"
+                        android:shadowDy="0.5"
+                        android:shadowRadius="1"
+                        android:text="Hesabınız yok mu? Şimdi kayıt olun."
+                        android:textColor="@color/secondaryColor"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="10dp"
+                app:contentPadding="10dp"
+                android:visibility="gone"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:elevation="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:shadowColor="@color/grey"
+                        android:shadowDx="0.5"
+                        android:shadowDy="0.5"
+                        android:shadowRadius="1"
+                        android:text="arababam.net"
+                        android:textColor="@color/secondaryColor"
+                        android:textSize="24sp" />
+
+
+                    <EditText
+                        android:id="@+id/editTextReg_Username"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/edit_text_tasarim"
+                        android:elevation="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Kullanıcı adı"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp" />
+
+                    <EditText
+                        android:id="@+id/editTextReg_Email"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/edit_text_tasarim"
+                        android:elevation="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp" />
+
+                    <EditText
+                        android:id="@+id/editTextReg_Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/edit_text_tasarim"
+                        android:elevation="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Şifre"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp" />
+
+                    <EditText
+                        android:id="@+id/editTextReg_PasswordAgain"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/edit_text_tasarim"
+                        android:elevation="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Şifre tekrar"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="16dp"
+                        android:minHeight="50dp">
+
+                        <CheckBox
+                            android:id="@+id/checkBoxUyelikSozlesmesi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <TextView
+                            android:id="@+id/textViewUyelikSozlesmesi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:elevation="5dp"
+                            android:focusable="true"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="16sp"
+                            android:text="Üyelik sözleşmesini kabul ediyorum."
+                            android:textStyle="normal"
+                            />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/textViewRegError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:gravity="center"
+                        android:shadowColor="@color/grey"
+                        android:shadowDx="0.5"
+                        android:shadowDy="0.5"
+                        android:shadowRadius="1"
+                        android:text="İnternet bağlantınızı kontrol ediniz!"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="17sp"
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/buttonRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_margin="16dp"
+                        android:backgroundTint="@color/primaryColor"
+                        android:elevation="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Kayıt Ol"
+                        android:textAllCaps="false"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/textViewGirisYap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:gravity="center"
+                        android:shadowColor="@color/grey"
+                        android:shadowDx="0.5"
+                        android:shadowDy="0.5"
+                        android:shadowRadius="1"
+                        android:text="Hesabınız var mı? Giriş yapın."
+                        android:textColor="@color/secondaryColor"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="veya"
+                android:textColor="@color/grey_dark"
+                android:textSize="20sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_google"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="10dp"
+                app:contentPadding="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/google_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:shadowColor="@color/grey"
+                        android:shadowDx="0.5"
+                        android:shadowDy="0.5"
+                        android:shadowRadius="1"
+                        android:text="Google ile Giriş Yap"
+                        android:textColor="@color/secondaryColor"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

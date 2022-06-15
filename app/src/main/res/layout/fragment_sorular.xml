@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SorularFragment"
+    android:orientation="vertical"
+    android:background="@color/black_a">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="56dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarSorular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                android:background="@color/black_a"
+                app:theme="@style/ToolbarTheme"
+                app:title=" ">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="arababam.net"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    android:layout_gravity="center"
+                    android:id="@+id/toolbar_title" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/black_a"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:visibility="gone"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filtrele"
+                    android:textColor="@color/grey_dark"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinnerSorularMarka"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginTop="10dp"
+                    />
+                <Spinner
+                    android:id="@+id/spinnerSorularModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/white"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sırala"
+                    android:textColor="@color/grey_dark"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    />
+
+                <Spinner
+                    android:id="@+id/spinnerSorularSirala"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <CheckBox
+                    android:id="@+id/checkboxSorularKayitliTut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bu ayarları kayıtlı tut."
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp"
+                    />
+
+                <Button
+                    android:id="@+id/buttonSorularFilterUygula"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Uygula"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textSize="16sp"
+                    android:elevation="5dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutSorularNotFound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="36dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/grey_dark"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSorularNotFound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Soru bulunamadı!"
+                    android:textColor="@color/grey_dark"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textSize="20sp"
+                    />
+
+                <Button
+                    android:id="@+id/buttonSorularNotFoundTekrardene"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Tekrar dene"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/grey_dark"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recylerViewSorular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:visibility="visible"/>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

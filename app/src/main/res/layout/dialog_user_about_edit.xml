@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingStart="16dp"
+android:paddingEnd="16dp"
+android:paddingTop="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hakkında bilgini güncelle"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/grey_dark"
+        android:textSize="20sp"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/editTextDialogUserAboutEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_tasarim"
+        android:elevation="5dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Hakkınızda bir şeyler yazın."
+        android:inputType="textMultiLine"
+        android:maxLength="150"
+        android:lines="2"
+        android:maxLines="3"
+        android:minLines="2"
+        android:scrollbars="vertical"
+        android:padding="10dp"
+        android:gravity="start"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="end"
+        >
+
+        <TextView
+            android:id="@+id/textViewDialogUserAboutEditIptal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="İptal"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/secondaryColor"
+            android:textSize="18sp"
+            android:layout_marginEnd="32dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            />
+
+        <TextView
+            android:id="@+id/textViewDialogUserAboutEditGuncelle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Güncelle"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/secondaryColor"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

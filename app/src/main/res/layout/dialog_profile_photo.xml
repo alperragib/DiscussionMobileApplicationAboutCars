@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutDialogProfilePhotoGoruntule"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/grey2"
+        >
+
+        <TextView
+            android:id="@+id/textViewDialogProfilePhotoGoruntule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profil fotoğrafımı görüntüle"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp"
+            android:textColor="@color/grey_dark"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey2"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutDialogProfilePhotoYeniSec"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        >
+
+        <TextView
+            android:id="@+id/textViewDialogProfilePhotoYeniSec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Galeriden yeni bir fotoğraf seç"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp"
+            android:textColor="@color/black_a"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey2"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutDialogProfilePhotoKaldir"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/grey2"
+        >
+
+        <TextView
+            android:id="@+id/textViewDialogProfilePhotoKaldir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profil fotoğrafımı kaldır"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp"
+            android:textColor="@color/grey_dark"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey2"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

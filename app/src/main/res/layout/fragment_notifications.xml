@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.NotificationsFragment"
+    android:orientation="vertical"
+    android:background="@color/black_a">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="56dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/black_a"
+        app:theme="@style/ToolbarTheme"
+        app:title=" ">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Bildirimler"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:gravity="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutNotificationNotFound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="36dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_error_outline"
+                    app:tint="@color/grey_dark"
+                    />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bildirim bulunamadı!"
+                    android:textColor="@color/grey_dark"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textSize="20sp"
+                    />
+
+                <Button
+                    android:id="@+id/buttonNotificationNotFoundTekrardene"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Tekrar dene"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/grey_dark"
+                    />
+
+            </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerViewNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:visibility="gone"
+        />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

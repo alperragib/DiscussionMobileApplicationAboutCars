@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "370021917560",
+    "project_id": "arababam-proje",
+    "storage_bucket": "arababam-proje.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370021917560:android:1e1fb3eada0ae6a1531e8d",
+        "android_client_info": {
+          "package_name": "com.yazilimmuhendisim.arababam.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370021917560-3a2vssqbn48hfsaqimep9mnccf66am67.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yazilimmuhendisim.arababam.app",
+            "certificate_hash": "e4c45226e932f1ee4034c064f0ecf2df384d03d5"
+          }
+        },
+        {
+          "client_id": "370021917560-3h62610fucdn98ktsa2dkm3a8ctmqvtv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yazilimmuhendisim.arababam.app",
+            "certificate_hash": "b1b8ca30adaf282e046882de34a21dda6fbbccac"
+          }
+        },
+        {
+          "client_id": "370021917560-6u4tplgtfldem16f6f68rei0br9n95tf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNxOkCgUqQnhAlaVGFm4WN8SqtX4rqYIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370021917560-6u4tplgtfldem16f6f68rei0br9n95tf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

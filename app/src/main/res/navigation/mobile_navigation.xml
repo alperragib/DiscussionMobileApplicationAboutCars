@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_sorular">
+
+    <fragment
+        android:id="@+id/navigation_sorular"
+        android:name="com.yazilimmuhendisim.arababam.app.fragment.SorularFragment"
+        android:label="Sorular"
+        tools:layout="@layout/fragment_sorular" />
+
+    <fragment
+        android:id="@+id/navigation_sorusor"
+        android:name="com.yazilimmuhendisim.arababam.app.fragment.SoruSorFragment"
+        android:label="Soru Sor"
+        tools:layout="@layout/fragment_sorusor" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.yazilimmuhendisim.arababam.app.fragment.NotificationsFragment"
+        android:label="Bildirimler"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.yazilimmuhendisim.arababam.app.fragment.ProfileFragment"
+        android:label="Profilim"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

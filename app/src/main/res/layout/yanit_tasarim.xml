@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black_a"
+    android:orientation="vertical"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="7dp"
+        app:contentPadding="10dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textViewYanitDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_gravity="end"
+            android:text="Bugün 15:40"
+            android:textColor="@color/black_a"
+            android:textSize="13sp"
+            android:layout_marginBottom="5dp"
+            />
+
+    <TextView
+        android:id="@+id/textViewYanitIcerik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="start"
+        android:text="Yanıt içeriği buraya gelecek? Yanıt içeriği buraya gelecek? Yanıt içeriği buraya gelecek? Yanıt içeriği buraya gelecek? Yanıt içeriği buraya gelecek?"
+        android:textColor="@color/black_a"
+        android:textSize="18sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerViewYanitImages"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="16dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutYanitEnIyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="5dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageViewYanitEnIyi"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_check_box_outline"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="En iyi yanıt olarak belirle."
+                android:textColor="@color/black_a"
+                />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/linearLayotYanitProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleImageViewYanitProfile"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_person"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/black_a"
+                    app:civ_circle_background_color="@color/grey"
+                    android:scaleType="centerCrop"
+                    android:elevation="3dp"
+                    android:layout_margin="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewYanitUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:text="username"
+                    android:textColor="@color/black_a"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutYanitLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayoutYanitEnIyiYanit"
+                android:layout_marginEnd="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/imageViewYanitLike"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_like_bos"
+                    app:tint="@color/black_a"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewYanitLikeSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
+                    android:text="24"
+                    android:textColor="@color/black_a"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutYanitEnIyiYanit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_check_circle"
+                    app:tint="@color/black_a" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="En iyi yanıt"
+                    android:textColor="@color/black_a"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutYanitCizgi"
+        android:layout_width="5dp"
+        android:layout_height="32dp"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="visible"
+        />
+
+</LinearLayout>
